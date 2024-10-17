@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Montserrat'; /* The name you'll use in your CSS */
+  src: url('fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype'); /* Adjust the path according to your structure */
+  font-weight: normal; /* You can specify the weight here */
+  font-style: normal; /* You can specify the style here */
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-VariableFont_wght') format('truetype'); /* Specify the bold variant */
+  font-weight: bold; /* Weight for the bold variant */
+  font-style: normal; 
+}
+
+*{
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  /* font-size: 1.6em; */
+  line-height: 1.1;
+}
+
+h1{
+  font-size: 1.6rem !important;
+}
+
+h2{
+  font-size: 1.4rem !important;
+}
