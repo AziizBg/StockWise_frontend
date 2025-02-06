@@ -6,19 +6,18 @@ import TopBar from "./components/NavBar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Review from "./pages/Review";
 
-
 function App() {
   return (
-      <div className="p-0 m-0 w-100">
-        <TopBar />
-        <div className="p-5">
-          <Routes>
-            {/* Define your routes here */}
-            <Route path="/" element={<Review />} />
-            <Route path="/simulation" element={<Simulation />} />
-          </Routes>
-        </div>
+    <div className="p-0 m-0 w-100">
+      <TopBar />
+      <div className="p-5">
+        <Routes>
+          {/* <Route path="/" element={<Review />} />
+            <Route path="/simulation" element={<Simulation />} /> */}
+          <Route path="/" element={<Simulation />} />
+        </Routes>
       </div>
+    </div>
   );
 }
 

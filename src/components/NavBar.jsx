@@ -1,7 +1,7 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import { NavLink } from 'react-router-dom';  // Import NavLink instead of Link
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { NavLink } from "react-router-dom"; // Import NavLink instead of Link
 
 export default function TopBar() {
   return (
@@ -12,15 +12,19 @@ export default function TopBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             {/* Use NavLink with 'active' className and custom styles */}
-            <NavLink
+            {/* <NavLink
               to="/"
-              className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
             >
               Review
-            </NavLink>
+            </NavLink> */}
             <NavLink
-              to="/simulation"
-              className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
             >
               Simulation
             </NavLink>
