@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Charts from "../components/Charts";
 import ReviewForm from "../components/ReviewForm";
+import { environment } from "../environment";
+
+
 
 function getDate(number, start_date) {
   try {
@@ -28,7 +31,7 @@ const Review = () => {
       setPurchasePrice(data.u_price);
       setSalePrice(data.u_sale);
       const response = await axios.post(
-        "http://127.0.0.1:5000/api/realdata", data
+        environment.production.api_url, data
       );
       console.log("response", response);
       
@@ -59,6 +62,7 @@ const Review = () => {
       </div>
       {data && (
         <Charts
+          
           chartData={data}
           start_date={start}
           salePrice={salePrice}

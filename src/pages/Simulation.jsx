@@ -4,6 +4,7 @@ import axios from "axios";
 import SimulationForm from "../components/SimulationForm"; // Import the new form component
 
 import Charts from "../components/Charts";
+import { environment } from "../environment";
 
 function getDate(number, start_date) {
   try {
@@ -30,7 +31,7 @@ const Simulation = () => {
       setSalePrice(data.u_sale);
       setStartDate(new Date(data.start_date));
       const response = await axios.post(
-        "http://127.0.0.1:5000/api/simulation",
+        environment.production.api_url + "/simulation",
         data
       );
       const { dates, stock_price, quantity_ordered, cumulative_supply } =
